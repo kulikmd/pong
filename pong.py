@@ -52,13 +52,17 @@ def paddle_a_down():
 # Function to move paddle B up
 def paddle_b_up():
     y = paddle_b.ycor()
-    y += 20
+    y += 60
+    if y > 230:
+        y = 230
     paddle_b.sety(y)
 
 # Function to move paddle B down
 def paddle_b_down():
     y = paddle_b.ycor()
-    y -= 20
+    y -= 60
+    if y< -230:
+        y =-230
     paddle_b.sety(y)
 
 # Keyboard bindings
