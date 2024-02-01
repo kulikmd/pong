@@ -2,7 +2,7 @@ import turtle
 
 win = turtle.Screen()
 win.title("Pong")
-win.bgcolor("black")
+win.bgcolor("green")
 win.setup(width=800, height=600)
 
 # Paddle A
@@ -36,13 +36,17 @@ ball.dy = -2
 # Function to move paddle A up
 def paddle_a_up():
     y = paddle_a.ycor()
-    y += 20
+    y += 60
+    if y > 230:
+        y = 230
     paddle_a.sety(y)
 
 # Function to move paddle A down
 def paddle_a_down():
     y = paddle_a.ycor()
-    y -= 20
+    y -= 60
+    if y< -230:
+        y =-230
     paddle_a.sety(y)
 
 # Function to move paddle B up
